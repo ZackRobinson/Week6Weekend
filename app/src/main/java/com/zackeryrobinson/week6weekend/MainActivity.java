@@ -1,5 +1,6 @@
 package com.zackeryrobinson.week6weekend;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
@@ -39,5 +40,19 @@ public class MainActivity extends AppCompatActivity {
         }.execute();
     }
 
+    public void toTimber(View view) {
+        Intent intent = new Intent(this, TimberActivity.class);
+        startActivity(intent);
+    }
+
+    public void toScanner(View view) {
+        Intent intent = new Intent(this, ScannerActivity.class);
+        startActivity(intent);
+    }
+
+    public void toSugarActivity(View view) {
+        Intent intent = new Intent(this, SugarActivity.class);
+        startActivity(intent);
+    }
 
 }
