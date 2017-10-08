@@ -8,13 +8,13 @@ import com.orm.SugarRecord;
  * Created by ios on 10/7/17.
  */
 
-public class SugarObject extends SugarRecord {
+public class SObject extends SugarRecord {
     String name;
 
-    public SugarObject(){
+    public SObject(){
     }
 
-    public SugarObject(String name)
+    public SObject(String name)
     {
         this.name = name;
     }

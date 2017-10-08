@@ -31,8 +31,8 @@ public class SugarActivity extends AppCompatActivity{
     {
         String name = String.valueOf(etName.getText());
         if (name != null) {
-            SugarObject sugarObject = new SugarObject(name);
-            sugarObject.save();
+            SObject sObject = new SObject(name);
+            sObject.save();
             Toast.makeText(this, "Object Created", Toast.LENGTH_SHORT).show();
             etName.setText("");
         }
@@ -41,9 +41,9 @@ public class SugarActivity extends AppCompatActivity{
     public void bulkRetrieve()
     {
         String name ="";
-        List<SugarObject> sugarObjectList = SugarObject.listAll(SugarObject.class);
-        for (int i = 0; i <sugarObjectList.size() ; i++) {
-            name += sugarObjectList.get(i).getName() +" ";
+        List<SObject> sObjectList = SObject.listAll(SObject.class);
+        for (int i = 0; i < sObjectList.size() ; i++) {
+            name += sObjectList.get(i).getName() +" ";
         }
         tvResult.setText(name);
     }
@@ -61,7 +61,7 @@ public class SugarActivity extends AppCompatActivity{
     @Override
     protected void onStop() {
         super.onStop();
-        SugarObject.deleteAll(SugarObject.class);
+        SObject.deleteAll(SObject.class);
 
     }
 }
